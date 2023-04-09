@@ -43,7 +43,7 @@ while True:
             my_damage = wizard_damage
             print('Health: ', my_hp)
             print('Damage: ', my_damage)
-            break
+            
 
         elif character == '2' or character.lower() == 'elf':
             character = elf
@@ -52,7 +52,7 @@ while True:
             my_damage = elf_damage
             print('Health: ', my_hp)
             print('Damage: ', my_damage)
-            break
+            
 
         elif character == '3' or character.lower() == 'human':
             character = human
@@ -61,7 +61,7 @@ while True:
             my_damage = human_damage
             print('Health: ', my_hp)
             print('Damage: ', my_damage)
-            break
+            
 
         elif character == '4' or character.lower() == 'orc':
             character = orc
@@ -70,24 +70,24 @@ while True:
             my_damage = orc_damage
             print('Health: ', my_hp)
             print('Damage: ', my_damage)
-            break
+            
+        else:
+            print('Unknown character')
 
-        print('Unknown character')
-
-    # battle
-    while True:
-        dragon_hp = dragon_hp - my_damage
-        print('The', character, 'damaged the Dragon!')
-        print('Dragon health: ', dragon_hp)
-        if dragon_hp <= 0:
-            print('The Dragon has lost the battle!')
-            break
-        my_hp = my_hp - dragon_damage()
-        print('The Dragon has damaged the', character)
-        print('Your health: ', my_hp)
-        if my_hp <= 0:
-            print('The', character, "has lost the battle!")
-            break
+        # battle
+        while True:
+            dragon_hp = dragon_hp - my_damage
+            print('The', character, 'damaged the Dragon!')
+            print('Dragon health: ', dragon_hp)
+            if dragon_hp <= 0:
+                print('The Dragon has lost the battle!')
+                break
+            my_hp = my_hp - dragon_damage()
+            print('The Dragon has damaged the', character)
+            print('Your health: ', my_hp)
+            if my_hp <= 0:
+                print('The', character, "has lost the battle!")
+                break
 
     # Play again?
     restart = input('Play again?(Y/N): ')
