@@ -1,9 +1,3 @@
-battlegame2
-
-This is an updated version of my battlegame.
-All I added was the random damage. Although the character damage is only randomly picked once, the dragon damage is 
-randomized on each cycle.
-
 # battlegame
 This is my first attempt at a turn-based battle game.
 I intend to improve upon it by adding some or all of the following:
